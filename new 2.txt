@@ -1,0 +1,163 @@
+switch(player.getPlayerInventory(place).getWayTyp())
+			{
+			case "Magier":
+				switch(player.getPlayerInventory(place).getTyp())
+				{
+				case "Stab":
+					player.setPlayerWeapon(player.getPlayerInventory(place));
+					if(amount >= 2)
+					{
+						player.getPlayerInventory(place).setAmount(--amount);
+					}
+					else
+					{
+						player.removeItem(place);
+					}
+					System.out.printf("Du hast jetzt %s als Waffe ausgeruestet%n"
+							+ "+ %d auf Staerke %n"
+							+ "+ %d auf Ausdauer%n",
+							player.getPlayerWeapon().getName(), player.getPlayerWeapon().getStrength(),
+							player.getPlayerWeapon().getEndurance());
+					break;
+				case "Brust":
+					player.setPlayerChest(player.getPlayerInventory(place));
+					if(amount >= 2)
+					{
+						player.getPlayerInventory(place).setAmount(--amount);
+					}
+					else
+					{
+						player.removeItem(place);
+					}
+					break;
+				case "Helm":
+					player.setPlayerHelm(player.getPlayerInventory(place));
+					if(amount >= 2)
+					{
+						player.getPlayerInventory(place).setAmount(--amount);
+					}
+					else
+					{
+						player.removeItem(place);
+					}
+					break;
+				default:
+					System.out.printf("Erorr: Eingabe nicht verstanden%n");
+					break;
+				}
+				break;
+			case "Krieger":
+				switch(player.getPlayerInventory(place).getTyp())
+				{
+				case "Schwert":
+					player.setPlayerWeapon(player.getPlayerInventory(place));
+					if(amount >= 2)
+					{
+						player.getPlayerInventory(place).setAmount(--amount);
+					}
+					else
+					{
+						player.removeItem(place);
+					}
+					System.out.printf("Du hast jetzt %s als Waffe ausgeruestet", player.getPlayerWeapon().getName());
+					break;
+				case "Brust":
+					player.setPlayerChest(player.getPlayerInventory(place));
+					if(amount >= 2)
+					{
+						player.getPlayerInventory(place).setAmount(--amount);
+					}
+					else
+					{
+						player.removeItem(place);
+					}
+					break;
+				case "Helm":
+					player.setPlayerHelm(player.getPlayerInventory(place));
+					if(amount >= 2)
+					{
+						player.getPlayerInventory(place).setAmount(--amount);
+					}
+					else
+					{
+						player.removeItem(place);
+					}
+					break;
+				default:
+					System.out.printf("Erorr: Eingabe nicht verstanden%n");
+						
+				}
+				break;
+			case "Bogenschuetze":
+				switch(player.getPlayerInventory(place).getTyp())
+				{
+				case "Bogen":
+					player.setPlayerWeapon(player.getPlayerInventory(place));
+					if(amount >= 2)
+					{
+						player.getPlayerInventory(place).setAmount(--amount);
+					}
+					else
+					{
+						player.removeItem(place);
+					}
+					break;
+				case "Brust":
+					player.setPlayerChest(player.getPlayerInventory(place));
+					if(amount >= 2)
+					{
+						player.getPlayerInventory(place).setAmount(--amount);
+					}
+					else
+					{
+						player.removeItem(place);
+					}
+					break;
+				case "Helm":
+					player.setPlayerHelm(player.getPlayerInventory(place));
+					if(amount >= 2)
+					{
+						player.getPlayerInventory(place).setAmount(--amount);
+					}
+					else
+					{
+						player.removeItem(place);
+					}
+					break;
+				default:
+					System.out.printf("Erorr: Eingabe nicht verstanden%n");
+						
+				}
+				break;
+			case "":
+				switch(player.getPlayerInventory(place).getTyp())
+				{
+				case "Brust":
+					player.setPlayerChest(player.getPlayerInventory(place));
+					if(amount >= 2)
+					{
+						player.getPlayerInventory(place).setAmount(--amount);
+					}
+					else
+					{
+						player.removeItem(place);
+					}
+					break;
+				case "Helm":
+					player.setPlayerHelm(player.getPlayerInventory(place));
+					if(amount >= 2)
+					{
+						player.getPlayerInventory(place).setAmount(--amount);
+					}
+					else
+					{
+						player.removeItem(place);
+					}
+					break;
+				default:
+					System.out.printf("Erorr: Eingabe nicht verstanden%n");
+				}
+				break;
+			default:
+				System.out.printf("Erorr: Eingabe nicht verstanden%n");
+			}
